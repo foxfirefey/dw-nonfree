@@ -1,0 +1,4 @@
+# Ignore SCSS cache
+.sass-cache
+# Ignore compiled CSS
+htdocs/stc/css
