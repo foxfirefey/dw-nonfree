@@ -9,6 +9,8 @@ sass_dir = "htdocs/scss"
 images_dir = "htdocs/img"
 javascripts_dir = "htdocs/js"
 
+add_import_path "../../htdocs/scss"
+
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
 
