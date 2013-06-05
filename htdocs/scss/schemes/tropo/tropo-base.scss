@@ -30,6 +30,10 @@
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  */
 
+$topbar-bg: #DDDDDD;
+
+@import "foundation";
+
 body {
     font: 100%/1 Verdana, Helvetica, Arial, sans-serif;
 }
@@ -42,11 +46,9 @@ body {
  */
 
 #canvas {
-    font-size: .75em;
+    font-size: 1em;
     line-height: 1.5;
     margin: 0;
-    width: 92%;
-    padding: 0 4%;
     border-style: solid;
     border-width: 2em 0;
 }
@@ -55,8 +57,6 @@ body {
 }
 
 #page {
-    max-width: 80em;
-    margin: 0 auto;
     position: relative;
     z-index: 1;
 }
@@ -66,22 +66,24 @@ body {
  */
 
 #masthead {
-    height: 8.833333em;
-    width: 100%;
-    position: relative;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 0.5em solid #F4717A;
+    border-top: 0.5em solid #E3E3E3;
 }
+#masthead .inner {
+    @include grid-row(false);
+}
+
 #masthead #logo {
     display: block;
-    position: absolute;
-    top: 2.25em;
-    left: 0;
+    margin-top: 2.5em;
+}
+
+#nav-login-form {
+   margin-top: 1em; 
 }
 
 #account-links {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-right: 1em;
     text-align: right;
 }
 #account-links ul li {
@@ -89,24 +91,19 @@ body {
     float: left;
     margin: 0 .5em;
 }
-#account-links #login-table {
-    margin-top: 1em;
+#account-links #nav-login-form {
+    margin-bottom: 0em;
+
+    label[for="login_remember_me"] {
+        display: inline;
+        margin-right: 1em;
+    }
 }
-#account-links #login-table td {
-    padding: 3px;
-    text-align: right;
-}
-#account-links #login-table td.input-cell,
-#account-links #login-table td.remember-me-cell {
-    text-align: left;
-}
-#account-links #login-table td.input-cell a {
-    font-size: .8em;
-}
+
+
 #account-links-text {
     float: right;
     padding-right: 1em;
-    padding-top: 2em;
 }
 #account-links-text .ljuser {
     font-size: 1.5em;
@@ -119,8 +116,8 @@ body {
 }
 #account-links-userpic img {
     margin-top: 0.75em;
-    max-height: 7.5em;
-    max-width: 7.5em;
+    max-height: 90px;
+    max-width: 90px;
 }
 
 /**
@@ -129,63 +126,7 @@ body {
  * The menu follows the content in the markup source, so we absolutely position it underneath the masthead
  */
 
-nav {
-    position: absolute;
-    top: 8.833333em;
-    left: 0;
-    height: 2.5em;
-    width: 100%;
-    line-height: 2.5em;
-    clear: both;
-}
-nav ul {
-    margin-left: 0;
-}
-nav ul li {
-    float: left;
-    position: relative;
-    display: block;
-    height: 100%;
-    width: 0;
-}
-nav ul > li {
-    width: auto;
-}
-nav ul li a {
-    display: block;
-    text-decoration: none;
-    text-indent: 2em;
-    padding-right: .75em;
-}
-
-/* .hover is a class added by js for the currently hovered/focused menu */
-nav ul li.hover a {
-    height: 100%;
-    width: auto;
-}
-nav ul li.hover a:hover {
-    cursor: pointer;
-}
-nav ul li ul {
-    display: none;
-}
-nav ul li.hover ul {
-    display: block;
-    position: absolute;
-    top: 2.5em;
-    left: 0;
-    width: 18em;
-}
-nav ul li ul li {
-    float: none;
-    width: 100%;
-}
-nav ul li ul li a {
-    text-align: left;
-    display: block;
-    width: 100%;
-}
-nav .appwidget-search {
+/* nav .appwidget-search {
     text-align: right;
     line-height: 2.1em;
     padding-right: .833333em;
@@ -205,7 +146,7 @@ nav .appwidget-search input {
 }
 nav .appwidget-search select {
     max-width: 20%;
-}
+} */
 
 /**
  * Footer
@@ -213,17 +154,24 @@ nav .appwidget-search select {
 
 footer {
     width: 100%;
-    height: 4.166667em;
     clear: both;
     padding: .45em 0 0 .63em;
-}
-footer ul {
-    overflow: hidden;
-}
-footer ul li {
-    list-style: none;
-    float: left;
-    margin-right: .8em;
+    overflow: auto;
+
+    ul {
+        overflow: hidden;
+        font-size: .8em;
+        margin-left: 0em;
+
+        li {
+            list-style: none;
+            float: left;
+            margin-right: .8em;
+        }
+
+    }
+    
+    p { font-size: .8em; }
 }
 
 /**
@@ -234,6 +182,7 @@ footer ul li {
 #content {
     margin-top: 4.6em;
     margin-bottom: 2.75em;
+    @include grid-row(false);
 }
 #content h1 {
     font: bold 2em/1.5 Arial, sans-serif;
@@ -275,27 +224,6 @@ ul, ol {
  * content is placed inside based on order of importance.
  */
 
-/* full page (default) */
-#primary,
-#secondary {
-    width: 100%;
-    margin-bottom: 2em;
-}
-
-/* 2 column wide right sidebar */
-.layout-wide-right-sidebar #primary {
-    width: 65%;
-    margin-right: 1.25em;
-    float: left;
-    padding: 0;
-}
-.layout-wide-right-sidebar #secondary {
-    float: right;
-    width: 30%;
-    margin: 0;
-    padding: 0;
-    padding-top: .5em;
-}
 
 /**
  * Panels are generic boxes for divs inside of #content
@@ -360,14 +288,6 @@ ul, ol {
  * Scheme-specific blocks
  */
 
-#shim-alpha {
-    font-size: .75em;
-    position: absolute;
-    top: 2em;
-    left: 0;
-    height: 7.833333em;
-    width: 100%;
-}
 #updateinsobject {
     z-index: 5;
 }

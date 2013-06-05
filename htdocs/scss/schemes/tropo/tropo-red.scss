@@ -64,7 +64,12 @@ a:active,
  */
 
 nav {
-    background: #ddd url(/img/tropo-red/bg_menu_gradient.png) repeat-x;
+    background-color: #e9e9e9;
+    background-image: -moz-linear-gradient(top, #e0e0e0, #ededed 30%, #e9e9e9);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#e9e9e9), color-stop(30%, #ededed));
+    background-image: -webkit-linear-gradient(top, #e0e0e0, #ededed 30%, #e9e9e9);
+    background-image: -o-linear-gradient(top, #e0e0e0, #ededed 30%, #e9e9e9);
+    background-image: linear-gradient(top, #e0e0e0, #ededed 30%, #e9e9e9);
 }
 nav ul li.topnav a {
     background: transparent url(/img/tropo-red/icon_menu_swirl.png) 0.833333em 0.916667em no-repeat;
@@ -87,7 +92,11 @@ nav ul li.hover ul {
  */
 
 footer {
-    background: #ddd url(/img/tropo-red/bg_footer_gradient.png) repeat-x;
+	background-image: -moz-linear-gradient(top, #dadada, #eaeaea 17%, #ededed);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#dadada), to(#ededed), color-stop(17%, #eaeaea));
+	background-image: -webkit-linear-gradient(top, #dadada, #eaeaea 17%, #ededed);
+	background-image: -o-linear-gradient(top, #dadada, #eaeaea 17%, #ededed);
+	background-image: linear-gradient(top, #dadada, #eaeaea 17%, #ededed);
 }
 
 /**
