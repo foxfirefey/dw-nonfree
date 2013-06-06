@@ -51,13 +51,13 @@ the same terms as Perl itself.  For a copy of the license, please reference
                 Firefox %]
                 <div id="masthead" role="banner">
                     <div class="row">
-                    <div class="columns large-6 small-12">
+                    <div class="columns large-4 small-12">
                     <span id="logo">
                         [% PROCESS block.logo %]
                     </span>
                     </div>
                    
-                    <div class="columns large-6 small-12"> 
+                    <div class="columns large-8 small-12"> 
                     <div id="account-links" role="navigation">
                         [% PROCESS block.accountlinks %]
                     </div>
