@@ -60,7 +60,7 @@ HEAD
         use DW::InviteCodes;
 
         LJ::need_res( "js/tropo/homepage.js" );
-        LJ::need_res( "stc/tropo/homepage.css" );
+        LJ::need_res( "stc/css/schemes/tropo/homepage.css" );
 
         $headextra .= <<HEAD;
 <script type="text/javascript">
@@ -79,8 +79,8 @@ HEAD
         $headextra .= "</script>\n";
 
         $ret .= <<HTML;
-<div id="intro-box">
-    <div id="intro-box-main">
+<div id="intro-box" class="row collapse">
+    <div id="intro-box-main" class="columns large-7 small-12">
         <div id="intro-border-main-top"></div>
         <div id="intro-border-main-bottom"></div>
         <div id="intro-border-main-left">
@@ -98,14 +98,8 @@ HTML
         $ret .= <<HTML;
         </div>
     </div>
-    <div id="intro-box-create">
-        <div id="intro-border-create-top"></div>
-        <div id="intro-border-create-bottom"></div>
-        <div id="intro-border-create-right">
-            <div id="intro-border-create-bottomright"></div>
-            <div id="intro-border-create-topright"></div>
-        </div>
-        <div id="intro-create-content">
+    <div id="intro-box-create" class="columns large-5 small-12">
+        <div id="intro-create-content" >
 HTML
         $ret .= "<h1>" . BML::ml( ".create.join_dreamwidth", { sitename => $LJ::SITENAMESHORT } ) . "</h1>\n";
 

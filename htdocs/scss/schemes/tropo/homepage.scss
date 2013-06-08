@@ -2,9 +2,7 @@
 
 div#intro-box-main {
   background-color: rgb(240, 240, 240);
-  float: left;
-  min-height: 160px;
-  width: 70%;
+  /*  min-height: 18em; */
   position: relative;
 }
 
@@ -95,76 +93,18 @@ div#intro-border-main-bottomright {
 /* Create borders */
 
 div#intro-box-create {
-  background-color: rgb(197, 53, 60);
-  min-height: 160px;
-  float: right;
-  width: 30%;
   position: relative;
   text-align: center;
-}
-
-div#intro-border-create-bottom {
-  background-image: url(/img/tropo-red/homepage/create-box-bottom.png);
-  background-position: bottom center;
-  background-repeat: repeat-x;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 2px;
-}
-
-div#intro-border-create-top {
-  background-image: url(/img/tropo-red/homepage/create-box-top.png);
-  background-position: top center;
-  background-repeat: repeat-x;
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 10px;
-}
-
-div#intro-border-create-topright {
-  background-image: url(/img/tropo-red/homepage/create-box-topright.png);
-  background-position: top right;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  width: 4px;
-  height: 11px;
-}
-
-div#intro-border-create-right {
-  background-image: url(/img/tropo-red/homepage/create-box-right.png);
-  background-position: center right;
-  background-repeat: repeat-y;
-  position: absolute;
-  right: 0px;
-  width: 3px;
-  height: 100%;
-}
-
-div#intro-border-create-bottomright {
-  background-image: url(/img/tropo-red/homepage/create-box-bottomright.png);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  width: 4px;
-  height: 3px;
+  /* min-height: 18em; */
 }
 
 /* Other stuff */
 
 div#intro-box {
-  width: 100%;
-  min-height: 160px;
-  margin-left: auto;
-  margin-right: auto;
   font-family: sans-serif;
   position: relative;
   line-height: normal;
+  background-color: rgb(197, 53, 60);
 }
 
 div#intro-box-main h1 {
